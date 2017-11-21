@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">	
+	<title>JavaScript</title>
+</head>
+<body>
+	<style>
+		html{
+			height: 100%;
+		}
+
+		body
+		{
+			background-image: linear-gradient(45deg,#808080, #E6E6E6)
+		}
+	</style>
+
+
+
+<script type="text/javascript">
+	//alert('Я программист!');//1 задание лаб.1
+	var firstName = "Бренд";//2 задание лаб.2
+	var lastName = "Эйхом";
+	var fullName = firstName +" "+lastName;
+	alert(fullName);
+
+	var obj = "Программирование";
+	alert(obj);
+
+	
+	var name = "Андрей";//задание 3 лаб.2
+	var admin = name;
+	alert(admin);
+	
+	var A = 1000;
+	var B = 5;
+	var C=A;
+	A=B;
+	B=C;
+	alert("A = "+A+". B = "+B);
+	//Способы задания чисел (1 Задание)
+	/*12e4 = 120.000;
+	0e-5 = 00000.0 = 0;
+	123e-3 = 000.123;
+	0xc8 = 200
+	0xfa = 250 */
+	alert(12e4 + " " + 0e-5 + " " + 123e-3 + " " + 0xc8 + " " + 0xfa + " !" );//ЗАДАНИЕ 1 (ЛАБ. 2)
+///Упражнение 1///
+var num = 77.123456;
+var num2 = 1;
+  alert("Типы данных элементов:\n" + num + " = " +typeof(num) + "\n" + num2 + " = " + typeof(num2) + "\n" + num/0 + "\n" + "строка" * 2);
+///Упражнение 2///
+	alert ("2e-1: " + 2e-1 + " " + " 3e3: " + 3e3 + " " + " 7.29e2: " + 7.29e2 + " " + " 33e-1: " + 33e-1);
+///Упражнение 3///
+	alert ("| 7.1: "+ 7.1.toExponential() + "| 0.000009: " + 0.000009.toExponential() + "| 33.3: " + 33.3.toExponential() + "| 10.001: "+ 10.001.toExponential());
+///Упражнение 4///
+	alert (1.23456789.toExponential(5) + "\n" + 1.23456789.toExponential(1)+"\n" +1.23456789.toExponential(4)+"\n" + 1.23456789.toExponential(2));
+///Упражнение 5///
+	var mas = [5,77.12345,0.1,1e1];
+	alert (mas + ": " + typeof(mas.toString()));
+///Упражнение 6///
+	var array = [12345.6789, 1.23e+10, 1.23e-3];
+	// .toPrecision - округление общего кол-ва цифр(само число в склбках проаускается)
+	// .toFixed - округление количества цифр после запятой
+	alert(array[0].toPrecision(1) + " " + array[1].toPrecision(2) + " " + array[2].toPrecision(6) + "\n" + array[0].toFixed(1) + " " + array[1].toFixed(2) + " " + array[2].toFixed(6));
+///Упражнение 7///
+	alert(Number.MAX_VALUE + "    " + Number.MIN_VALUE + "    "+Number.NaN + "    "+Number.POSITIVE_INFINITY+ "    "+Number.NEGATIVE_INFINITY );
+///Упражнение 8///
+ var mas1=[1.7,25.1,0.1]
+	alert(Math.ceil(mas1[0]) + " " + Math.ceil(mas1[1]) + " " + Math.ceil(mas1[2]) + "\n"+//ceil округляет до большего
+	Math.floor(mas1[0])+" "+Math.floor(mas1[1])+" "+Math.floor(mas1[2]) + "\n"+//floor округляет до меньшего
+	Math.round(mas1[0])+" "+Math.round(mas1[1])+" "+Math.round(mas1[2]));//0.5+ до большего, если ниже до меньшего	
+
+///Упражнение 9///
+	alert(Math.sqrt(9)+" "+ Math.sqrt(2)+" "+Math.sqrt(-4)+" "+Math.sqrt(1e2));//-4 NaN потому, что отрицательное число
+///Упражнение 10///
+		alert(Math.max(0.1,3e-4,9.9e-2)+" | "+ Math.min(0.1,3e-4,9.9e-2) +"\n" + Math.max(Number.POSITIVE_INFINITY,0,Number.NEGATIVE_INFINITY)+" | "+ Math.min(Number.POSITIVE_INFINITY,0,Number.NEGATIVE_INFINITY));
+///Упражнение 11///
+		alert(Math.abs(2)+" | "+Math.abs(-1.1)+" | "+Math.abs(-3.2));
+///Упражнение 12(11)///
+	alert(Math.random() + "\n"+ (Math.random() * (1-10)) +"\n"+ Math.floor(Math.random() * (1-10)));//floor - округляет до меншего
+				//от 0 до 1                     //от 1 до 10               //целое число от 1 до 10
+
+	
+	///*/Упражение 1/*/// Работа с типом данных String	
+	var name = "Эльвидин";
+	var secondname = "Сейдаметов";
+	var lastname = "Эльдар-оглы";
+	alert("ФИО: "+ name +" "+secondname+" "+lastname+";"+"\nТип данных: "+typeof(name + secondname + lastname)+"\n"+
+		"Длина имени= "+ name.length + ". Фамилии= "+ secondname.length + ". Отчества= "+lastname.length+".");	
+
+	///Упражнение 2/// Работа  с доступом к отдельным символам
+	var str="Шла Саша по шоссе";
+	alert("Первые 2: "+str.charAt(0)+"  "+str[1]+"\nПоследние 2: "+str.charAt(str.length-2)+"  "+str.charAt(str.length-1));
+	alert(str.indexOf(" "));//упражнение 3 (первая пустая подстрока)
+	//упражнение 5//
+	var per = "Шла саша по шоссе!";
+	var per11= per.indexOf("саша");
+	var ch = per.slice(0,per11) + per[per11].toUpperCase() + per.slice(per11+1,per.length);
+	alert(ch);
+	//Упражнение 5//
+	var fail = "Не хочу учится а хочу женится";//учится - учиться      ,а     женится - жениться
+	mass = ["ь",","];
+	var truE = fail.slice(0,12) + mass[0] + fail.slice(12,14) + mass[1] + fail.slice(14,27) + mass[0] + fail.slice(27, fail.length); 
+	alert(truE);
+</script>
+</body>
+</html>
