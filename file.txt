@@ -1,4 +1,8 @@
 Жили были на свете три программиста и звали их 
 1. Francis
 2. newL(Second-Developer)
+<<<<<<< HEAD
 3. AcidOrange(Three)
+=======
+3. AcidOrange
+>>>>>>> 8f49d7783ea6fb5efc062770dd9b35396946e700
